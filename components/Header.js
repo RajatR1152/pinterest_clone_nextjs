@@ -27,24 +27,24 @@ export default function Header() {
 
 
 
-    const logedIn = localStorage.getItem("isLogedIn");
-    setIsLogedIn(logedIn);
+        const logedIn = localStorage.getItem("isLogedIn");
+        setIsLogedIn(logedIn);
 
-    onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            const uid = user.uid;
-            let data = {
-                username: user.displayName,
-                email: user.email,
-                image: user.photoURL
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                const uid = user.uid;
+                let data = {
+                    username: user.displayName,
+                    email: user.email,
+                    image: user.photoURL
+                }
+                await setDoc(doc(db, 'users', uid), data);
+                setUserData(user);
             }
-            await setDoc(doc(db, 'users', uid), data);
-            setUserData(user);
-        }
-        else {
-            null
-        }
-    });
+            else {
+                null
+            }
+        });
 
     return !isLogedIn ? (
         <div className="contianer w-11/12 bg-white shadow-md rounded-e-2xl p-5 my-5">
