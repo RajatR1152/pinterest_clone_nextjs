@@ -39,7 +39,7 @@ export default function page() {
   console.log(userData);
 
   return (
-    <div className='bg-slate-50 py-1 h-screen'>
+    <div className='bg-slate-100 py-1 h-screen'>
       <PostLayout />
     </div>
   )

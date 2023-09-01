@@ -9,7 +9,7 @@ export default function PinsList({ data, isUser }) {
             {
                 data.map((d, i) => {
                     return (
-                        <div className='bg-slate-200 my-5 rounded-lg h-fit' key={i}>
+                        <div className='bg-slate-100 my-5 rounded-lg h-fit' key={i}>
                             <PinItem isUser={isUser} data={d} />
                         </div>
                     )
