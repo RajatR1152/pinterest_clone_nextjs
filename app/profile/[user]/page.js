@@ -24,7 +24,6 @@ export default function page() {
 
     function logOut() {
         signOut(auth).then(() => {
-            localStorage.clear();
             setIsLogedIn(false);
             router.push('/login');
         })

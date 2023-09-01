@@ -26,10 +26,6 @@ export default function Header() {
     }
 
 
-
-        const logedIn = localStorage.getItem("isLogedIn");
-        setIsLogedIn(logedIn);
-
         onAuthStateChanged(auth, async (user) => {
             if (user) {
                 const uid = user.uid;

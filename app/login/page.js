@@ -28,7 +28,6 @@ export default function page() {
                         image: user.photoURL
                     }
                     await setDoc(doc(db, 'users', uid), data);
-                    localStorage.setItem("isLogedIn",true);
                 }
                 else {
                     null
