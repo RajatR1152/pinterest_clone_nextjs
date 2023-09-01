@@ -18,10 +18,10 @@ export default function PinItem({ data, isUser }) {
                             <div className="absolute h-full flex-col w-full bg-black/20 rounded-xl flex -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                                 <BsBookmark size={30} className='text-white ms-auto m-5' />
                                 <div className='flex items-center text-white p-2 mt-auto flex-row gap-3' onClick={() => { window.location.href = `/search-user/${data.email}` }}>
-                                    <img src={data.authorImg} alt="" className="rounded-full w-8 h-8" />
+                                    <img src={data.authorImg} alt="" className="rounded-full w-4 h-4 md:w-8 md:h-8" />
                                     <div className="container flex flex-col">
-                                        <h2 className="md:text-xl xl:text-xl lg:text-xl font-semibold">{data.author}</h2>
-                                        <h3 className="text-sm lg:text-md font-semibold">{data.email}</h3>
+                                        <h2 className="md:text-lg xl:text-xl lg:text-xl font-semibold">{data.author}</h2>
+                                        <h3 className="text-xs lg:text-md font-semibold">{data.email}</h3>
                                     </div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@ import PinItem from "./PinItem"
 export default function PinsList({ data, isUser }) {
 
     return (
-        <div className="md:columns-3 gap-3 lg:columns-3 xl:columns-4 mt-10 w-screen">
+        <div className="md:columns-3 columns-2 gap-3 lg:columns-3 xl:columns-4 mt-10 w-screen">
             {
                 data.map((d, i) => {
                     return (
