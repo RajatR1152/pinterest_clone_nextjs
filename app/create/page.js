@@ -72,7 +72,6 @@ export default function page() {
                 }
 
                 await setDoc(doc(db, 'posts', postId), postData).then((res) => {
-                    console.log('saved');
                     setLoading(false);
                     setFormData({
                         title: '',
@@ -86,7 +85,6 @@ export default function page() {
         })
     }
 
-    console.log(userData)
     return !userData?.email ? (
         <div className="container w-full h-screen flex flex-col items-center justify-center">
             <Spinner size={30} color={'blue'} />

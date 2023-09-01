@@ -43,8 +43,6 @@ export default function page() {
         })
     }
 
-    console.log("usedata", userData);
-    console.log("userpins", pinsList);
 
     return (
         <div className="contianer">

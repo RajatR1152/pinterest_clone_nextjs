@@ -17,7 +17,6 @@ export default function Header() {
     const { isLogedIn, setIsLogedIn } = useContext(LoginContext);
     const [showNavs, setShowNavs] = useState(false);
     const [search, setSearch] = useState('');
-    console.log("data", userData);
 
     const path = usePathname();
 
@@ -42,7 +41,7 @@ export default function Header() {
             }
         });
 
-    return !isLogedIn ? (
+    return !userData?.email ? (
         <div className="contianer w-11/12 bg-white shadow-md rounded-e-2xl p-5 my-5">
             <div className="container flex flex-row gap-5 w-fit ms-auto">
                 <Link className='font-bold text-gray-700 text-lg' href={'/login'}>sign in</Link>
